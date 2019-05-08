@@ -7,20 +7,21 @@ namespace Composer\Autoload;
 class ComposerStaticInit7894c0ed95869a09f94f7ca0acbb2d4b
 {
     public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Component\\Routing\\' => 26,
-            'Symfony\\Component\\HttpKernel\\' => 29,
-            'Symfony\\Component\\HttpFoundation\\' => 33,
-            'Symfony\\Component\\EventDispatcher\\' => 34,
-            'Symfony\\Component\\Debug\\' => 24,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Flex\\' => 13,
             'Symfony\\Bridge\\Twig\\' => 20,
-            'Silex\\' => 6,
         ),
         'P' => 
         array (
@@ -33,37 +34,25 @@ class ComposerStaticInit7894c0ed95869a09f94f7ca0acbb2d4b
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Symfony\\Component\\Routing\\' => 
+        'Symfony\\Polyfill\\Ctype\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/routing',
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'Symfony\\Component\\HttpKernel\\' => 
+        'Symfony\\Flex\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/http-kernel',
-        ),
-        'Symfony\\Component\\HttpFoundation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/http-foundation',
-        ),
-        'Symfony\\Component\\EventDispatcher\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
-        ),
-        'Symfony\\Component\\Debug\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/debug',
+            0 => __DIR__ . '/..' . '/symfony/flex/src',
         ),
         'Symfony\\Bridge\\Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/twig-bridge',
-        ),
-        'Silex\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/silex/silex/src/Silex',
         ),
         'Psr\\Log\\' => 
         array (
@@ -81,13 +70,6 @@ class ComposerStaticInit7894c0ed95869a09f94f7ca0acbb2d4b
             'Twig_' => 
             array (
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
-            ),
-        ),
-        'P' => 
-        array (
-            'Pimple' => 
-            array (
-                0 => __DIR__ . '/..' . '/pimple/pimple/src',
             ),
         ),
     );

@@ -1,12 +1,501 @@
 # heroku-buildpack-php CHANGELOG
 
-## v121 (2017-02-28)
+## v154 (2019-04-04)
+
+### ADD
+
+- PHP/7.2.17 [David Zuelke]
+- PHP/7.3.4 [David Zuelke]
+- Apache/2.4.39 [David Zuelke]
+- PHP/7.1.28 [David Zuelke]
+
+### CHG
+
+- librdkafka/1.0.0 [David Zuelke]
+- libcassandra/2.11.0 [David Zuelke]
+
+## v153 (2019-03-18)
+
+### ADD
+
+- ext-newrelic/8.6.0.238 [David Zuelke]
+- ext-redis/4.3.0 [David Zuelke]
+
+## v152 (2019-03-13)
+
+### ADD
+
+- Nginx/1.14.2 (#241, #285) [David Zuelke]
+- Update Nginx MIME types for woff and woff2 formats (#286) [David Zuelke]
+
+### CHG
+
+- Restructure Nginx configs and add compatibility with Nginx/1.9.3+ (#198) [David Zuelke]
+- Build Nginx with `ngx_http_ssl_module` (#182) [David Zuelke]
+
+## v151 (2019-03-08)
+
+### ADD
+
+- PHP/7.1.27 [David Zuelke]
+- PHP/7.2.16 [David Zuelke]
+- PHP/7.3.3 [David Zuelke]
+- ext-phalcon/3.4.3 [David Zuelke]
+- ext-apcu/5.1.17 [David Zuelke]
+
+### CHG
+
+- Composer/1.8.4 [David Zuelke]
+
+## v150 (2019-02-07)
+
+### ADD
+
+- ext-blackfire/1.24.4 [David Zuelke]
+- Apache/2.4.38 [David Zuelke]
+- PHP/7.2.15 [David Zuelke]
+- PHP/7.3.2 [David Zuelke]
+
+### CHG
+
+- Composer/1.8.3 [David Zuelke]
+
+### FIX
+
+- ext-oauth doesn't find libcurl headers on heroku-18 (#322) [David Zuelke]
+
+## v149 (2019-01-14)
+
+### ADD
+
+- ext-memcached/3.1.3 [David Zuelke]
+- ext-amqp/1.9.4 [David Zuelke]
+- PHP/5.6.40 [David Zuelke]
+- PHP/7.1.26 [David Zuelke]
+- PHP/7.2.14 [David Zuelke]
+- PHP/7.3.1 [David Zuelke]
+- ext-pq/2.1.5 [David Zuelke]
+
+### CHG
+
+- Use PHP 7.3 for bootstrapping [David Zuelke]
+
+### FIX
+
+- Boot scripts fail without GNU realpath or GNU readlink (#317) [David Zuelke]
+
+## v148 (2018-12-20)
+
+### ADD
+
+- ext-apcu/5.1.16 [David Zuelke]
+- ext-blackfire/1.24.2 [David Zuelke]
+- ext-event/2.4.3 [David Zuelke]
+- ext-newrelic/8.5.0.235 [David Zuelke]
+
+### FIX
+
+- BSD grep doesn't support Perl expression mode (#311) [David Zuelke]
+
+## v147 (2018-12-13)
+
+### ADD
+
+- PHP/7.3.0 [David Zuelke]
+- PHP/7.2.13 [David Zuelke]
+- PHP/7.1.25 [David Zuelke]
+- PHP/7.0.33 [David Zuelke]
+- PHP/5.6.39 [David Zuelke]
+- ext-phalcon/3.4.2 [David Zuelke]
+- ext-newrelic/8.4.0.231 [David Zuelke]
+- ext-redis/4.2.0 [David Zuelke]
+- ext-apcu/5.1.14 [David Zuelke]
+- ext-event/2.4.2 [David Zuelke]
+
+### CHG
+
+- Look for configs relative to buildpack dir, and not to $CWD/vendor/heroku/…, in boot scripts [David Zuelke]
+- Look for default configs using version specific paths first in boot scripts [David Zuelke]
+- Apply non-default opcache INI settings only to the PHP 5 builds that need them [David Zuelke]
+- Composer/1.8.0 [David Zuelke]
+
+## v146 (2018-11-08)
+
+### ADD
+
+- Apache/2.4.37 [David Zuelke]
+- PHP/7.1.24 [David Zuelke]
+- PHP/7.2.12 [David Zuelke]
+
+### CHG
+
+- Translate `NEW_RELIC_LOG_LEVEL` values "verbose" and "verbosedebug" to "debug" for `newrelic-daemon` [David Zuelke]
+- librdkafka/0.11.6 [David Zuelke]
+
+## v145 (2019-10-16)
+
+### ADD
+
+- PHP/7.1.23 [David Zuelke]
+- PHP/7.2.11 [David Zuelke]
+- ext-oauth/2.0.3 [David Zuelke]
+- ext-mongodb/1.5.3 [David Zuelke]
+- ext-blackfire/1.23.1 [David Zuelke]
+- ext-newrelic/8.3.0.226 [David Zuelke]
+
+### FIX
+
+- Nginx reports "localhost" instead of requested hostname in SERVER_NAME FastCGI variable (#264) [David Zuelke]
+
+## v144 (2019-09-13)
+
+### ADD
+
+- PHP/5.6.38 [David Zuelke]
+- PHP/7.0.32 [David Zuelke]
+- PHP/7.1.22 [David Zuelke]
+- PHP/7.2.10 [David Zuelke]
+- ext-newrelic/8.2.0.221 [David Zuelke]
+- ext-phalcon/3.4.1 [David Zuelke]
+
+### CHG
+
+- Extra reminders about runtimes and stacks if runtime platform install fails [David Zuelke]
+- Warn users of PHP versions that are close to, or have reached, end of life or end of active support [David Zuelke]
+- Default to listen.mode=0666 for PHP-FPM socket to allow running in both Heroku Dynos and containers [David Zuelke]
+
+## v143 (2018-08-17)
+
+### ADD
+
+- PHP/7.2.9 [David Zuelke]
+- PHP/7.1.21 [David Zuelke]
+- ext-event/2.4.1 [David Zuelke]
+
+### CHG
+
+- Composer/1.7.2 [David Zuelke]
+
+## v142 (2018-08-08)
+
+### FIX
+
+- Check for 'minimum-stability' may fail if no 'composer.lock' present [David Zuelke]
+
+## v141 (2018-08-07)
+
+### ADD
+
+- ext-redis/4.1.1 [David Zuelke]
+- ext-mongodb/1.5.2 [David Zuelke]
+
+### CHG
+
+- Verbose error messasge on `bin/detect` failure [David Zuelke]
+- Emit brief warnings for common regexed build failure cases [David Zuelke]
+- Run most internal 'composer' invocations using '--no-plugins' [David Zuelke]
+- Composer/1.7.1 [David Zuelke]
+- Warn about 'minimum-stability' only if 'prefer-stable' is off [David Zuelke]
+
+### FIX
+
+- Generate Composer package repositories with empty JSON objects, not arrays, where required by Composer 1.7+ [David Zuelke]
+
+## v140 (2018-07-25)
+
+### CHG
+
+- Improved build error messages [David Zuelke]
+- Colors for build errors, warnings and notices [David Zuelke]
+- Remove use of composer.phar in project root [David Zuelke]
+- Trap unhandled build errors with dedicated message [David Zuelke]
+- Summarize all emitted warnings if subsequent build error occurs [David Zuelke]
+
+### FIX
+
+- stdlib download during build init may theoretically fail on download restart [David Zuelke]
+
+## v139 (2018-07-20)
+
+### ADD
+
+- PHP/5.6.37 [David Zuelke]
+- PHP/7.0.31 [David Zuelke]
+- PHP/7.1.20 [David Zuelke]
+- PHP/7.2.8 [David Zuelke]
+- Apache/2.4.34 [David Zuelke]
+- ext-redis/4.1.0 [David Zuelke]
+
+### CHG
+
+- librdkafka/0.11.5 [David Zuelke]
+
+## v138 (2018-07-10)
+
+### ADD
+
+- ext-blackfire/1.22.0 [David Zuelke]
+- Argon2 support for PHP 7.2 and heroku-18 [David Zuelke]
+- ext-apcu/5.1.12 [David Zuelke]
+- ext-mongodb/1.5.1 [David Zuelke]
+
+### FIX
+
+- PHP 7 built with --enable-opcache-file only on cedar-14 [David Zuelke]
+
+## v137 (2018-06-26)
+
+### ADD
+
+- PHP/7.1.19 [David Zuelke]
+- PHP/7.2.7 [David Zuelke]
+- ext-blackfire/1.20.1 [David Zuelke]
+- ext-phalcon/3.4.0 [David Zuelke]
+- ext-pq/2.1.4 [David Zuelke]
+- ext-mongodb/1.5.0 [David Zuelke]
+
+### FIX
+
+- New Relic daemon location is broken in PHP INI [David Zuelke]
+
+## v136 (2018-05-24)
+
+### ADD
+
+- ext-blackfire/1.20.0 [David Zuelke]
+- ext-newrelic/8.1.0.209 [David Zuelke]
+- PHP/7.1.18 [David Zuelke]
+- PHP/7.2.6 [David Zuelke]
+
+### CHG
+
+- Default to PHP 7 for heroku-18 and later [David Zuelke]
+- Composer/1.6.5 [David Zuelke]
+
+## v135 (2018-04-26)
+
+### ADD
+
+- PHP/5.6.36 [David Zuelke]
+- PHP/7.0.30 [David Zuelke]
+- PHP/7.1.17 [David Zuelke]
+- PHP/7.2.5 [David Zuelke]
+- ext-mongodb/1.4.3 [David Zuelke]
+- ext-redis/4.0.2 [David Zuelke]
+
+### CHG
+
+- Composer/1.6.4 [David Zuelke]
+- libcassandra/2.9.0 [David Zuelke]
+
+## v134 (2018-03-30)
+
+### ADD
+
+- Apache/2.4.33 [David Zuelke]
+- ext-newrelic/8.0.0.204 [David Zuelke]
+- ext-apcu/5.1.11 [David Zuelke]
+- ext-mongodb/1.4.2 [David Zuelke]
+- PHP/7.0.29 [David Zuelke]
+- PHP/7.1.16 [David Zuelke]
+- PHP/7.2.4 [David Zuelke]
+- ext-phalcon/3.3.2 [David Zuelke]
+- PHP/5.6.35 [David Zuelke]
+
+### CHG
+
+- librdkafka/0.11.4 [David Zuelke]
+
+## v133 (2018-03-21)
+
+### CHG
+
+- Internal changes only [David Zuelke]
+
+## v132 (2018-03-02)
+
+### ADD
+
+- PHP/5.6.34 [David Zuelke]
+- PHP/7.0.28 [David Zuelke]
+- PHP/7.1.15 [David Zuelke]
+- PHP/7.2.3 [David Zuelke]
+- ext-mongodb/1.4.1 [David Zuelke]
+- ext-apcu/5.1.10 [David Zuelke]
+- ext-apcu_bc/1.0.4 [David Zuelke]
+
+### CHG
+
+- libcassandra/2.8.1 [David Zuelke]
+
+## v131 (2018-02-12)
+
+### ADD
+
+- PHP/7.1.14 [David Zuelke]
+- PHP/7.2.2 [David Zuelke]
+- ext-blackfire/1.18.2 [David Zuelke]
+- ext-mongodb/1.4.0 [David Zuelke]
+
+### CHG
+
+- Enable ext-sodium for PHP 7.2 on stack heroku-16 [David Zuelke]
+- Composer/1.6.3 [David Zuelke]
+- Use Linux abstract socket for New Relic daemon communications [David Zuelke]
+
+## v130 (2018-01-11)
+
+### ADD
+
+- ext-newrelic/7.7.0.203 [David Zuelke]
+
+## v129 (2018-01-10)
+
+### ADD
+
+- ext-phalcon/3.3.1 [David Zuelke]
+- ext-pq/2.1.3 [David Zuelke]
+
+### CHG
+
+- Composer/1.6.2 [David Zuelke]
+
+## v128 (2018-01-04)
+
+### ADD
+
+- PHP/5.6.33 [David Zuelke]
+- PHP/7.0.27 [David Zuelke]
+- PHP/7.1.13 [David Zuelke]
+- PHP/7.2.1 [David Zuelke]
+- ext-blackfire/1.18.0 for PHP 7.2 [David Zuelke]
+- ext-apcu/5.1.9 [David Zuelke]
+- ext-mongodb/1.3.4 [David Zuelke]
+- ext-phalcon/3.3.0 [David Zuelke]
+- ext-redis/3.1.6 [David Zuelke]
+
+### CHG
+
+- Composer/1.6.0 [David Zuelke]
+- librdkafka/0.11.3 [David Zuelke]
+
+## v127 (2017-11-30)
+
+### ADD
+
+- ext-rdkafka/3.0.5 [David Zuelke]
+- ext-mongodb/1.3.3 [David Zuelke]
+- ext-memcached/3.0.4 [David Zuelke]
+- PHP/7.0.26 [David Zuelke]
+- PHP/7.1.12 [David Zuelke]
+- PHP/7.2.0 [David Zuelke]
+
+### CHG
+
+- libcassandra/2.8.0 [David Zuelke]
+
+### FIX
+
+- Heroku\Buildpack\PHP\Downloader::download() is missing optional third argument [David Zuelke]
+- Files like `composer.js` or similar are inaccessible in web root (#247) [David Zuelke]
+
+## v126 (2017-10-29)
+
+### ADD
+
+- PHP/5.6.32 [David Zuelke]
+- PHP/7.0.25 [David Zuelke]
+- PHP/7.1.11 [David Zuelke]
+- ext-newrelic/7.6.0.201 [David Zuelke]
+- ext-mongodb/1.3.1 [David Zuelke]
+- ext-amqp/1.9.3 [David Zuelke]
+- ext-phalcon/3.2.4 [David Zuelke]
+- Apache/2.4.29 [David Zuelke]
+
+### CHG
+
+- Ignore `require-dev` when building platform package dependency graph (#240) [David Zuelke]
+- Rewrite `provide` sections with PHP extensions in package definitions to `replace` for known polyfill packages [David Zuelke]
+- libcassandra/2.7.1 [David Zuelke]
+- librdkafka/0.11.1 [David Zuelke]
+
+### FIX
+
+- gmp.h lookup patching broken since v125 / d024b14 [David Zuelke]
+
+## v125 (2017-10-04)
+
+### ADD
+
+- PHP/7.0.24 [David Zuelke]
+- PHP/7.1.10 [David Zuelke]
+- ext-redis/3.1.4 [David Zuelke]
+- ext-mongodb/1.3.0 [David Zuelke]
+- ext-blackfire/1.18.0 [David Zuelke]
+
+### CHG
+
+- Composer/1.5.2 [David Zuelke]
+
+## v124 (2017-09-07)
+
+### FIX
+
+- Use Composer/1.5.1 [David Zuelke]
+
+## v123 (2017-09-07)
+
+### ADD
+
+- ext-mongo/1.6.16 [David Zuelke]
+- ext-newrelic/7.5.0.199 [David Zuelke]
+- ext-cassandra/1.3.2 [David Zuelke]
+- ext-rdkafka/3.0.4 [David Zuelke]
+- ext-phalcon/3.2.2 [David Zuelke]
+- PHP/7.1.9 [David Zuelke]
+- PHP/7.0.23 [David Zuelke]
+- ext-mongodb/1.2.10 [David Zuelke]
+
+### CHG
+
+- Support "heroku-sys-library" package type in platform installer [David Zuelke]
+- Add new argument for "provide" platform package manifest entry to `manifest.py` [David Zuelke]
+- Move libcassandra to its own package, installed as a dependency by platform installer [David Zuelke]
+- Move libmemcached to its own package, installed as a dependency by platform installer (if the platform doesn't already provide it) [David Zuelke]
+- Move librdkafka to its own package, installed as a dependency by platform installer [David Zuelke]
+- libcassandra/2.7.0 [David Zuelke]
+- librdkafka/0.11.0 [David Zuelke]
+- Composer/1.5.1 [David Zuelke]
+
+## v122 (2017-08-03)
+
+### ADD
+
+- ext-mongodb/1.2.9 [David Zuelke]
+- ext-amqp/1.9.1 [David Zuelke]
+- ext-blackfire/1.17.3 [David Zuelke]
+- ext-newrelic/7.4.0.198 [David Zuelke]
+- ext-phalcon/3.2.1 [David Zuelke]
+- ext-pq/2.1.2 [David Zuelke]
+- ext-redis/3.1.3 [David Zuelke]
+- ext-rdkafka/3.0.3 [David Zuelke]
+- PHP/7.0.22 [David Zuelke]
+- PHP/7.1.8 [David Zuelke]
+- PHP/5.6.31 [David Zuelke]
+
+### CHG
+
+- Do not auto-enable ext-newrelic and ext-blackfire in Heroku CI runs [David Zuelke]
+- Composer/1.4.2 [David Zuelke]
+- Do not error if buildpack package is installed during Heroku CI runs [David Zuelke]
+
+## v121 (2017-03-28)
 
 ### ADD
 
 - ext-blackfire/1.15.0 [David Zuelke]
 - PHP/7.0.17 [David Zuelke]
-- PHP/7.1.2 [David Zuelke]
+- PHP/7.1.3 [David Zuelke]
 - ext-cassandra/1.3.0 [David Zuelke]
 - ext-mongodb/1.2.8 [David Zuelke]
 - ext-amqp/1.9.0 (for heroku-16 only) [David Zuelke]
