@@ -9,8 +9,11 @@
 	php -S localhost:8000
 	
 #modify php.ini and add 
+
 extension = php_mysqli
-also add
+
+#also add
+
 extension_dir = C:\path\to\php\ext
 	
 #visit localhost:8000 in your browser
