@@ -1,6 +1,7 @@
 # note-manager
  
-# installphp version 5.5 or newer
+# install php version 5.5 or newer
+$ install MySQL
 
 #navigate to your desired folder then run these commands to install
 	
