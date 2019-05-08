@@ -5,18 +5,12 @@
 	$database = "CREATE DATABASE c1";
 	if ($conn->query($database) === TRUE)
 	{
-		echo "Database c1 created successfully<br>";
 	}
 	else
 	{
-		echo "Error creating db: " . $conn->error . "<br>";
 	}
 	closeConnect($conn);
 	$conn = connectdb();
-
-	
-	
-
 	//created users
 	//Should now return "Error creating table: table 'users' already exists"
 	$usersT = "CREATE TABLE `users` (
@@ -29,16 +23,13 @@
 	PRIMARY KEY (`id`),
 	UNIQUE KEY `email` (`email`)
 	) ENGINE=InnoDB DEFAULT CHARSET=utf8";
-	
-	if ($conn->query($usersT) === TRUE)
+	if($conn->query($usersT) === TRUE)
 	{
 		echo "Table 'users' created successfully<br>";
 	}
 	else
 	{
-		echo "Error creating table: " . $conn->error . "<br>";
 	}
-
 	//created notes
 	//Should now return "Error creating table: table 'notes' already exists"
 	$notesT = "CREATE TABLE `notes` (
@@ -50,51 +41,37 @@
 	`created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	`content` varchar(255) NULL DEFAULT NULL,
 	PRIMARY KEY (`id`)
-	) ENGINE=InnoDB DEFAULT CHARSET=utf8";
-	
-	if ($conn->query($notesT) === TRUE)
+	)ENGINE=InnoDB DEFAULT CHARSET=utf8";
+	if($conn->query($notesT) === TRUE)
 	{
 		echo "Table 'notes' created successfully<br>";
 	}
 	else
 	{
-		echo "Error creating table: " . $conn->error . "<br>";
 	}
-
 	//Creating the test account
 	//In a full application this would be user input
 	//Should now return "Duplicate entry 'test@test.com' for key 'email'"
 	$testPassword = '$sh4rpspr1nG$';
 	$encrypted = encryption($testPassword);
-	
 	$testUser = "INSERT into users (name, email, password, updated_at)
 	VALUES ('test', 'test@test.com', '$encrypted', CURRENT_TIMESTAMP)";
-	
-	if ($conn->query($testUser) === TRUE){
+	if($conn->query($testUser) === TRUE){
 		echo "User successfully created!";
 	}
 	else
 	{
-		echo "ERROR: " . $testUser . "<br>" . $conn->error;
-	}
-	
+    }
 	$testPassword2 = 'admin';
-	$encrypted2= encryption($testPassword2);
-
-	
+	$encrypted2 = encryption($testPassword2);
 	$testUser2 = "INSERT into users (name, email, password, updated_at)
 	VALUES ('admin', 'admin@admin.com', '$encrypted2', CURRENT_TIMESTAMP)";
-	
 	if ($conn->query($testUser2) === TRUE){
 		echo "User successfully created!";
 	}
 	else
 	{
-		echo "ERROR: " . $testUser2 . "<br>" . $conn->error;
 	}
-	
-	echo "<br>Connected Successfully";
 	closeConnect($conn);
-	header("location: view/login.php")
-	
+	header('location:view/login.php');
 ?>

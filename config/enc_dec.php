@@ -23,8 +23,7 @@
 		
 		//decryption result
 		$decrypted_result = decryption($inp_password, $test_hash);
-		echo $decrypted_result;
-		
+
 		//$testPassword = '$sh4rpspr1nG$';
 
 		//$count = mysqli_num_rows($pass_query_out);

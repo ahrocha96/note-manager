@@ -2,13 +2,12 @@
 	function encryption($password)
 	{
 		$hash = password_hash($password, PASSWORD_DEFAULT);
-		echo $hash . "<br>";
 		return $hash;
 	}
  
-	function decryption($password, $hash)
+	function decryption($password, $hash2)
 	{
-		$result = password_verify($password, $hash);
+		$result = password_verify($password, $hash2);
 		return $result;
 	}
    
