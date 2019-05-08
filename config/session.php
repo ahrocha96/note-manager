@@ -1,6 +1,6 @@
 <?php
    include('connect.php');
-   $conn = connect();
+   $conn = connectdb();
    session_start();
    //checks the logged in user's email against the database to retrieve the user
    $email_check = $_SESSION['user_email'];

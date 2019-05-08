@@ -1,7 +1,7 @@
 <?php
 	include("connect.php");
 	include("authentication.php");
-	$conn = connect();
+	$conn = connectdb();
 	session_start();
 	$error = ' ';
 	if($_SERVER["REQUEST_METHOD"] == "POST")
@@ -31,7 +31,7 @@
 		if($decrypted_result == true)
 		{
 			$_SESSION['user_email'] = $inp_email;
-			header("location: view/dashboard.php");
+			header("location: ../view/dashboard.php");
 			$error = " ";
 		}
 		else
