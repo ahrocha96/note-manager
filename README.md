@@ -1,6 +1,6 @@
 # note-manager
 
-# Test at this link: http://ss-notes.000webhostapp.com (works best on firefox, not chrome)
+# Test at this link: http://ss-notes.000webhostapp.com (works best on firefox)
  
 # To test on localhost: 
  
