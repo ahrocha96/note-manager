@@ -10,11 +10,16 @@
 	
 #modify php.ini and add 
 
-extension = php_mysqli
+	extension = php_mysqli
 
 #also add
 
-extension_dir = C:\path\to\php\ext
+	extension_dir = C:\path\to\php\ext
+	
+#in cmd window run:
+
+	php -S localhost:8000
+
 	
 #visit localhost:8000 in your browser
 
