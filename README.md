@@ -1,8 +1,12 @@
 # note-manager
- 
-# install php version 5.5 or newer
 
-# install MySQL
+# Test at this link: http://ss-notes.000webhostapp.com
+ 
+# To test on localhost: 
+ 
+#install php version 5.5 or newer
+
+#install MySQL
 
 #change root user localhost pass word to "thisisagoodpassword" in MySQL
 
