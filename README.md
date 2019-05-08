@@ -1,9 +1,17 @@
-# note-manager 
+# note-manager
+ 
+# installphp version 5.5 or newer
+
 #navigate to your desired folder then run these commands to install
 	
 	git clone https://github.com/ahrocha96/note-manager.git
 	cd note-manager
 	php -S localhost:8000
+	
+#modify php.ini and add 
+extension = php_mysqli
+also add
+extension_dir = C:\path\to\php\ext
 	
 #visit localhost:8000 in your browser
 
