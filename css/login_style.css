@@ -34,8 +34,8 @@
 		}
 		.button:hover,
 			{
-				background-color: ##4CAF50
-			  color: #000;
+				background-color: #4CAF50
+			  color: white;
 			  text-decoration: none;
 			  cursor: pointer;
 			}
