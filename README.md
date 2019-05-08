@@ -1,7 +1,10 @@
 # note-manager
  
 # install php version 5.5 or newer
-$ install MySQL
+
+# install MySQL
+
+#change root user localhost pass word to "thisisagoodpassword" in MySQL
 
 #navigate to your desired folder then run these commands to install
 	
