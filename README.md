@@ -10,12 +10,14 @@
 
 #ERRORS/BUGS
 #I noticed the Lumen requirement when I was nearly done. 
-#I implemented an authentication check, but I can work on adding the 
-#Lumen framework in the next day or two.
+I implemented an authentication check, but I can work on adding the 
+Lumen framework in the next day or two.
 #
 #I will be deploying this to heroku as well, I can send a link when I have
-#the dependencies figured out. HTTP 500 error the first few deploys
+the dependencies figured out. I received an HTTP 500 error the first few deploys
 #
+#The first time you login, it thinks there are no notes. Just submit a new one to view
+your other notes
 #TODO
 #I might include a search function to enhance the retrieval UX for the user.
 #
