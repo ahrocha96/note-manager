@@ -1,6 +1,10 @@
 # note-manager
 
 # Test at this link: http://ss-notes.000webhostapp.com (works best on firefox)
+
+#Username: test@test.com
+
+#Password: $sh4rpspr1nG$
  
 # To test on localhost: 
  
