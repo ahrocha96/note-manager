@@ -2,9 +2,9 @@
 
 # Test at this link: http://ss-notes.000webhostapp.com (works best on firefox)
 
-#Username: test@test.com
+#Username: admin@admin.com
 
-#Password: $sh4rpspr1nG$
+#Password: admin
  
 # To test on localhost: 
  
